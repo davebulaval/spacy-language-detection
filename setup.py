@@ -40,7 +40,6 @@ def main():
 
     version = get_version()
     print("Building version", version)
-    print("Building version", version)
     write_version_python_file(version)
 
     packages = find_packages()
