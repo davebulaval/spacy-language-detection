@@ -15,7 +15,7 @@ def _detect_language(spacy_object):
 
 class LanguageDetector:
     """
-    Fully customizable language detection pipeline for SpaCy.
+    Fully customizable language detection pipeline for spaCy.
 
     Arguments:
         language_detection_function: An optional custom language_detection_function. (Default None).

@@ -1,5 +1,5 @@
 import spacy
-from spacy_langdetect import LanguageDetector
+from spacy_language_detection import LanguageDetector
 
 # This only work with spaCy 2.0, it's not working with spaCy 3.0
 nlp = spacy.load("en")

@@ -1,4 +1,4 @@
-# Script to install the SpaCy models dependencies for tests
+# Script to install the spaCy models dependencies for tests
 import spacy
 
 spacy.cli.download("en_core_web_sm")

@@ -67,7 +67,7 @@ def main():
         packages=packages,
         install_requires=["spacy>=3.0.0", 'langdetect==1.0.9'],
         python_requires=">=3.7",
-        description="Fully customizable language detection for SpaCy pipeline",
+        description="Fully customizable language detection for spaCy pipeline",
         long_description=readme,
         long_description_content_type="text/markdown"
     )

@@ -71,7 +71,7 @@ When creating your enhancement request, please:
 ## Prerequisites
 
 We created `styling_requirements.txt` file to install all the tools used for the development of the library (the
-styling). Also, we created `tests/requirements_spacy.py` to install all the SpaCy language model needed for the tests.
+styling). Also, we created `tests/requirements_spacy.py` to install all the spaCy language model needed for the tests.
 
 You can install all the requirements with
 

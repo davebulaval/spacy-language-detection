@@ -1,6 +1,7 @@
 import spacy
 from spacy.language import Language
-from spacy_langdetect import LanguageDetector
+
+from spacy_language_detection import LanguageDetector
 
 
 def get_lang_detector(nlp, name):
