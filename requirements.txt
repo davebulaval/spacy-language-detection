@@ -1,3 +1,4 @@
-spacy>=2.0.0
+spacy
 pytest
-langdetect==1.0.7
+langdetect
+

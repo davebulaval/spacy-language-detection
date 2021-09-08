@@ -1,5 +1,7 @@
-from langdetect.lang_detect_exception import LangDetectException
+import langdetect
 from langdetect import detect_langs
+from langdetect.detector_factory import PROFILES_DIRECTORY, DetectorFactory
+from langdetect.lang_detect_exception import LangDetectException
 from spacy.tokens import Doc
 
 
@@ -12,20 +14,30 @@ def _detect_language(spacy_object):
 
 
 class LanguageDetector(object):
-    """Fully customizable language detection pipeline for spaCy.
+    """
+    Fully customizable language detection pipeline for SpaCy.
 
     Arguments:
         language_detection_function: An optional custom language_detection_function. (Default None).
-                                     If None uses, langdetect package to detect language
+                                     If None uses, `langdetect` package to detect the language of the doc
+                                     and of every sentence.
+        seed: A seed value to be used for the `langdetect` factory. (Default 42).
+            If language_detection_function is not None, this argument is ignored.
 
     # writing a custom language_detection_function:
         The function must take in a spacy Doc or Span object only as input and can return the detected language.
-        This is stored in Doc._.language, Span._.language and Token._.language attributes.
+        This is stored in Doc._.language and Span._.language attributes.
     """
 
-    def __init__(self, language_detection_function=None):
+    def __init__(self, language_detection_function=None, seed=42):
         if not language_detection_function:
             self._language_detection_function = _detect_language
+
+            factory = DetectorFactory()
+            factory.load_profile(PROFILES_DIRECTORY)
+            factory.set_seed(seed=seed)
+
+            langdetect.detector_factory._factory = factory
         else:
             self._language_detection_function = language_detection_function
 
@@ -34,6 +46,4 @@ class LanguageDetector(object):
         doc.set_extension("language", getter=self._language_detection_function, force=True)
         for sent in doc.sents:
             sent.set_extension("language", getter=self._language_detection_function, force=True)
-        for token in doc:
-            token.set_extension("language", getter=self._language_detection_function, force=True)
         return doc

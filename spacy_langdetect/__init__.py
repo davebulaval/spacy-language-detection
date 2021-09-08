@@ -1,1 +1,0 @@
-from .spacy_langdetect import LanguageDetector
