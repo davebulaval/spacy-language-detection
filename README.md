@@ -1,9 +1,8 @@
 # Here is spacy_language_detection
 
-`spacy_language_detection` is a fully customizable language detection for [spaCy](https://github.com/explosion/spaCy)
+Spacy_language_detection is a fully customizable language detection for [spaCy](https://github.com/explosion/spaCy)
 pipeline forked from
-[spacy-langdetect](https://github.com/Abhijit-2592/spacy-langdetect) in order to fix the seed problem (
-see [this issue](https://github.com/Abhijit-2592/spacy-langdetect/issues/3)) and to update it with spaCy 3.0.
+[spacy-langdetect](https://github.com/Abhijit-2592/spacy-langdetect) in order to fix the seed problem (see [this issue](https://github.com/Abhijit-2592/spacy-langdetect/issues/3)) and to update it with spaCy 3.0.
 
 Use spacy_language_detection to
 
