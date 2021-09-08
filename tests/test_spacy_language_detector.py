@@ -1,10 +1,12 @@
+# pylint: disable=unused-argument
+
 import unittest
 from unittest import TestCase
 
 import spacy
 from spacy.language import Language
 
-from spacy_langdetect import LanguageDetector
+from spacy_language_detection import LanguageDetector
 
 
 def get_lang_detector(nlp, name):
@@ -16,6 +18,7 @@ def get_lang_detector_custom(nlp, name):
 
 
 class LanguageDetectorTest(TestCase):
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.nlp_en = spacy.load("en_core_web_sm")

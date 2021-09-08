@@ -13,7 +13,7 @@ def _detect_language(spacy_object):
         return {"language": "UNKNOWN", "score": 0.0}
 
 
-class LanguageDetector(object):
+class LanguageDetector:
     """
     Fully customizable language detection pipeline for SpaCy.
 
