@@ -1,4 +1,4 @@
-import spacy.lang.fr.stop_words
+import spacy
 from spacy.language import Language
 from spacy_langdetect import LanguageDetector
 
