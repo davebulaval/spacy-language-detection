@@ -33,9 +33,9 @@ jobs:
           python setup.py develop
       - name: Linting
         run: |
-          yapf --diff --recursive spacy-language-detection/
+          yapf --diff --recursive spacy_language_detection/
           yapf --diff --recursive tests/
-          pylint spacy-language-detection/
+          pylint spacy_language_detection/
           pylint tests/
       - name: Test with pytest
         run: |
